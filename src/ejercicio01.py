@@ -33,6 +33,8 @@ def calcular_propina(importe: float, calidad: str) -> tuple[float, float]:
     if importe <= 0:
         return 0.0, 0.0
 
+    calidad = calidad.lower() # Si no, no acepta mayúsculas
+
     if calidad  == "excelente":
         porcentaje = 0.2
     elif calidad == "bueno":
@@ -41,7 +43,11 @@ def calcular_propina(importe: float, calidad: str) -> tuple[float, float]:
         porcentaje = 0.1
     elif calidad != "excelente" and calidad != "bueno" and calidad != "regular":
         return 0.0, importe
+    
+    propina = importe*porcentaje
+    total = importe+propina
 
+    return propina, total
 
 
 def solicitar_importe() -> float:

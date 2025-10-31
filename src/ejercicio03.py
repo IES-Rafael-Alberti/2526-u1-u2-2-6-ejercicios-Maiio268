@@ -28,6 +28,8 @@ def contar_digitos_pares_impares(numero: int) -> tuple[int, int]:
         - Si el número es 0, devolver (1, 0)
     """
     # TODO: Implementar la función
+
+    
     return (0, 0)
 
 
